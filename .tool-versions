@@ -3,3 +3,4 @@ direnv 2.33.0
 azure-cli 2.57.0
 terraform 1.7.4
 tflint 0.50.3
+terramate 0.4.6
