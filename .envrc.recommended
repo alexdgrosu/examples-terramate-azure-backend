@@ -1,0 +1,2 @@
+export AZURE_CONFIG_DIR="$PWD/.azure"
+export TM_DISABLE_SAFEGUARDS=git

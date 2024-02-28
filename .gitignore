@@ -3,9 +3,11 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=direnv
 
 ### direnv ###
-.secrets.env
+.direnv
+.envrc
 
 # End of https://www.toptal.com/developers/gitignore/api/direnv
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+
 .azure
