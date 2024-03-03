@@ -16,3 +16,7 @@ globals "project" {
     location = "westeurope"
   }
 }
+
+globals "project" "subscriptions" {
+  launchpad = "eb327489-7718-4d2a-85b8-b669981600e6"
+}

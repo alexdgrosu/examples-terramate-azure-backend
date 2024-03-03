@@ -1,3 +1,8 @@
+variable "subscription_id" {
+  description = "The subscription ID where the storage account will be created."
+  type        = string
+}
+
 variable "location" {
   description = "The location/region where the storage account will be created."
   type        = string

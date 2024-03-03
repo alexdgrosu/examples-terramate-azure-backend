@@ -1,9 +1,17 @@
 terraform {
   required_version = "~> 1.7.0"
+
+  required_providers {
+    time = {
+      source  = "hashicorp/time"
+      version = ">= 0.10.0, < 1.0.0"
+    }
+  }
 }
 
 resource "terraform_data" "backend_storage" {
   triggers_replace = {
+    SUBSCRIPTION_ID        = var.subscription_id
     LOCATION               = var.location
     RESOURCE_GROUP_NAME    = var.resource_group_name
     STORAGE_ACCOUNT_NAME   = var.storage_account_name
@@ -26,7 +34,13 @@ resource "terraform_data" "backend_storage" {
     on_failure  = continue
     when        = destroy
     environment = merge(self.triggers_replace, {
-      ACTION = "delete"
+      ACTION = "destroy"
     })
   }
+}
+
+resource "time_sleep" "ensure_role_assignments_in_effect" {
+  depends_on = [terraform_data.backend_storage]
+
+  create_duration = "120s"
 }
