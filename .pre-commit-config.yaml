@@ -33,6 +33,7 @@ repos:
           - --args=-json
           - --args=-no-color
           - --tf-init-args=-backend=false
+        exclude: ^modules/
       - id: terraform_fmt
         args:
           - --args=-diff
