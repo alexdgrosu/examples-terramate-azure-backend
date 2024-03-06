@@ -18,7 +18,7 @@ variable "storage_account_name" {
   type        = string
 }
 
-variable "storage_container_name" {
+variable "container_name" {
   description = "The name of the storage container. Must be unique within the storage account."
   type        = string
 }

@@ -3,10 +3,13 @@ globals "terraform" {
 }
 
 globals "terraform" "backend" "azurerm" {
-globals "terraform" "backend" {
-  storage_container_name = "tfstate"
-  storage_account_name   = "st${global.project.moniker}tfbackend${tm_format("%03d", global.project.revision)}"
-  resource_group_name    = "rg-${global.project.moniker}-tf-backend"
+  enabled = true
+
+  config = {
+    container_name       = "tfstate"
+    storage_account_name = "st${global.project.moniker}tfbackend${tm_format("%03d", global.project.revision)}"
+    resource_group_name  = "rg-${global.project.moniker}-tf-backend"
+  }
 }
 
 globals "project" {

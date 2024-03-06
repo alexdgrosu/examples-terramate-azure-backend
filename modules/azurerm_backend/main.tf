@@ -15,7 +15,7 @@ resource "terraform_data" "backend_storage" {
     LOCATION               = var.location
     RESOURCE_GROUP_NAME    = var.resource_group_name
     STORAGE_ACCOUNT_NAME   = var.storage_account_name
-    STORAGE_CONTAINER_NAME = var.storage_container_name
+    STORAGE_CONTAINER_NAME = var.container_name
   }
 
   provisioner "local-exec" {

@@ -48,3 +48,7 @@ terraform.rc
 
 .azure
 .terraform-cache-dir
+
+# We're purposefully tracking the state of the launchapd because we control
+# what ends up in the state.
+!stacks/launchpad/terraform.tfstate
