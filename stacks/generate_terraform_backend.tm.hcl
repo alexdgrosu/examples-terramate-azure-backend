@@ -1,4 +1,4 @@
-generate_hcl "_generated_azurerm_backend.tf" {
+generate_hcl "_generated_terraform_backend.tf" {
   lets {
     required_version = tm_try(global.terraform.version, "~> 1.7")
     key              = "${global.project.moniker}/${terramate.stack.path.relative}/terraform.tfstate"

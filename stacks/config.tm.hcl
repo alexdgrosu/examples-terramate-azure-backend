@@ -23,4 +23,9 @@ globals "project" {
 
 globals "project" "subscriptions" {
   launchpad = "eb327489-7718-4d2a-85b8-b669981600e6"
+
+  workloads = {
+    dev  = "00000000-0000-0000-0000-000000000001"
+    prod = "00000000-0000-0000-0000-000000000002"
+  }
 }
